@@ -13,28 +13,9 @@
 		2DB6714B25A97B9100419F71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB6714925A97B9100419F71 /* Main.storyboard */; };
 		2DB6714D25A97B9100419F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB6714C25A97B9100419F71 /* Assets.xcassets */; };
 		2DB6715025A97B9100419F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB6714E25A97B9100419F71 /* LaunchScreen.storyboard */; };
-		2DB6715B25A97B9100419F71 /* MSLDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6715A25A97B9100419F71 /* MSLDTests.swift */; };
-		2DB6716625A97B9100419F71 /* MSLDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6716525A97B9100419F71 /* MSLDUITests.swift */; };
 		2DB6718B25A98AAF00419F71 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */; };
 		2DB6719A25A9E28A00419F71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB6719925A9E28A00419F71 /* opencv2.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2DB6715725A97B9100419F71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2DB6713825A97B9100419F71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2DB6713F25A97B9100419F71;
-			remoteInfo = MSLD;
-		};
-		2DB6716225A97B9100419F71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2DB6713825A97B9100419F71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2DB6713F25A97B9100419F71;
-			remoteInfo = MSLD;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2DB6714025A97B9100419F71 /* MSLD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSLD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,12 +26,6 @@
 		2DB6714C25A97B9100419F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DB6714F25A97B9100419F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DB6715125A97B9100419F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DB6715625A97B9100419F71 /* MSLDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSLDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DB6715A25A97B9100419F71 /* MSLDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLDTests.swift; sourceTree = "<group>"; };
-		2DB6715C25A97B9100419F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DB6716125A97B9100419F71 /* MSLDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSLDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DB6716525A97B9100419F71 /* MSLDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLDUITests.swift; sourceTree = "<group>"; };
-		2DB6716725A97B9100419F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB6718825A98AAF00419F71 /* MSLD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSLD-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DB6718925A98AAF00419F71 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
@@ -66,20 +41,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2DB6715325A97B9100419F71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DB6715E25A97B9100419F71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,8 +50,6 @@
 				2DB6719525A9E27300419F71 /* Framework */,
 				2DB6717C25A989B500419F71 /* Wrapper */,
 				2DB6714225A97B9100419F71 /* MSLD */,
-				2DB6715925A97B9100419F71 /* MSLDTests */,
-				2DB6716425A97B9100419F71 /* MSLDUITests */,
 				2DB6714125A97B9100419F71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				2DB6714025A97B9100419F71 /* MSLD.app */,
-				2DB6715625A97B9100419F71 /* MSLDTests.xctest */,
-				2DB6716125A97B9100419F71 /* MSLDUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,24 +74,6 @@
 				2DB6715125A97B9100419F71 /* Info.plist */,
 			);
 			path = MSLD;
-			sourceTree = "<group>";
-		};
-		2DB6715925A97B9100419F71 /* MSLDTests */ = {
-			isa = PBXGroup;
-			children = (
-				2DB6715A25A97B9100419F71 /* MSLDTests.swift */,
-				2DB6715C25A97B9100419F71 /* Info.plist */,
-			);
-			path = MSLDTests;
-			sourceTree = "<group>";
-		};
-		2DB6716425A97B9100419F71 /* MSLDUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2DB6716525A97B9100419F71 /* MSLDUITests.swift */,
-				2DB6716725A97B9100419F71 /* Info.plist */,
-			);
-			path = MSLDUITests;
 			sourceTree = "<group>";
 		};
 		2DB6717C25A989B500419F71 /* Wrapper */ = {
@@ -175,42 +114,6 @@
 			productReference = 2DB6714025A97B9100419F71 /* MSLD.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2DB6715525A97B9100419F71 /* MSLDTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2DB6716D25A97B9100419F71 /* Build configuration list for PBXNativeTarget "MSLDTests" */;
-			buildPhases = (
-				2DB6715225A97B9100419F71 /* Sources */,
-				2DB6715325A97B9100419F71 /* Frameworks */,
-				2DB6715425A97B9100419F71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2DB6715825A97B9100419F71 /* PBXTargetDependency */,
-			);
-			name = MSLDTests;
-			productName = MSLDTests;
-			productReference = 2DB6715625A97B9100419F71 /* MSLDTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2DB6716025A97B9100419F71 /* MSLDUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2DB6717025A97B9100419F71 /* Build configuration list for PBXNativeTarget "MSLDUITests" */;
-			buildPhases = (
-				2DB6715D25A97B9100419F71 /* Sources */,
-				2DB6715E25A97B9100419F71 /* Frameworks */,
-				2DB6715F25A97B9100419F71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2DB6716325A97B9100419F71 /* PBXTargetDependency */,
-			);
-			name = MSLDUITests;
-			productName = MSLDUITests;
-			productReference = 2DB6716125A97B9100419F71 /* MSLDUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,14 +126,6 @@
 					2DB6713F25A97B9100419F71 = {
 						CreatedOnToolsVersion = 12.3;
 						LastSwiftMigration = 1230;
-					};
-					2DB6715525A97B9100419F71 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 2DB6713F25A97B9100419F71;
-					};
-					2DB6716025A97B9100419F71 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 2DB6713F25A97B9100419F71;
 					};
 				};
 			};
@@ -248,8 +143,6 @@
 			projectRoot = "";
 			targets = (
 				2DB6713F25A97B9100419F71 /* MSLD */,
-				2DB6715525A97B9100419F71 /* MSLDTests */,
-				2DB6716025A97B9100419F71 /* MSLDUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,20 +155,6 @@
 				2DB6715025A97B9100419F71 /* LaunchScreen.storyboard in Resources */,
 				2DB6714D25A97B9100419F71 /* Assets.xcassets in Resources */,
 				2DB6714B25A97B9100419F71 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DB6715425A97B9100419F71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DB6715F25A97B9100419F71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,36 +172,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2DB6715225A97B9100419F71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DB6715B25A97B9100419F71 /* MSLDTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DB6715D25A97B9100419F71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DB6716625A97B9100419F71 /* MSLDUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2DB6715825A97B9100419F71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2DB6713F25A97B9100419F71 /* MSLD */;
-			targetProxy = 2DB6715725A97B9100419F71 /* PBXContainerItemProxy */;
-		};
-		2DB6716325A97B9100419F71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2DB6713F25A97B9100419F71 /* MSLD */;
-			targetProxy = 2DB6716225A97B9100419F71 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2DB6714925A97B9100419F71 /* Main.storyboard */ = {
@@ -511,90 +361,6 @@
 			};
 			name = Release;
 		};
-		2DB6716E25A97B9100419F71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T435K2B8Y2;
-				INFOPLIST_FILE = MSLDTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = junsang.MSLDTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSLD.app/MSLD";
-			};
-			name = Debug;
-		};
-		2DB6716F25A97B9100419F71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T435K2B8Y2;
-				INFOPLIST_FILE = MSLDTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = junsang.MSLDTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSLD.app/MSLD";
-			};
-			name = Release;
-		};
-		2DB6717125A97B9100419F71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T435K2B8Y2;
-				INFOPLIST_FILE = MSLDUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = junsang.MSLDUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MSLD;
-			};
-			name = Debug;
-		};
-		2DB6717225A97B9100419F71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T435K2B8Y2;
-				INFOPLIST_FILE = MSLDUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = junsang.MSLDUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MSLD;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -612,24 +378,6 @@
 			buildConfigurations = (
 				2DB6716B25A97B9100419F71 /* Debug */,
 				2DB6716C25A97B9100419F71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2DB6716D25A97B9100419F71 /* Build configuration list for PBXNativeTarget "MSLDTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2DB6716E25A97B9100419F71 /* Debug */,
-				2DB6716F25A97B9100419F71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2DB6717025A97B9100419F71 /* Build configuration list for PBXNativeTarget "MSLDUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2DB6717125A97B9100419F71 /* Debug */,
-				2DB6717225A97B9100419F71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

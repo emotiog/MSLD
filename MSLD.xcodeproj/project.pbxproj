@@ -15,6 +15,10 @@
 		2DB6715025A97B9100419F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB6714E25A97B9100419F71 /* LaunchScreen.storyboard */; };
 		2DB6718B25A98AAF00419F71 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */; };
 		2DB6719A25A9E28A00419F71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB6719925A9E28A00419F71 /* opencv2.framework */; };
+		CE9285AF264EDA0B0061299E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9285AE264EDA0B0061299E /* ResultViewController.swift */; };
+		CEA6FD3B264829F40058B77A /* DescManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA6FD34264829F40058B77A /* DescManager.cpp */; };
+		CEA6FD3C264829F40058B77A /* LineDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA6FD35264829F40058B77A /* LineDetector.cpp */; };
+		CEA6FD3D264829F40058B77A /* msld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA6FD38264829F40058B77A /* msld.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,14 @@
 		2DB6718925A98AAF00419F71 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2DB6719925A9E28A00419F71 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		CE9285AE264EDA0B0061299E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CEA6FD34264829F40058B77A /* DescManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DescManager.cpp; sourceTree = "<group>"; };
+		CEA6FD35264829F40058B77A /* LineDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LineDetector.cpp; sourceTree = "<group>"; };
+		CEA6FD36264829F40058B77A /* system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = system.h; sourceTree = "<group>"; };
+		CEA6FD37264829F40058B77A /* msld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msld.h; sourceTree = "<group>"; };
+		CEA6FD38264829F40058B77A /* msld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = msld.cpp; sourceTree = "<group>"; };
+		CEA6FD39264829F40058B77A /* LineDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDetector.h; sourceTree = "<group>"; };
+		CEA6FD3A264829F40058B77A /* DescManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 		2DB6713725A97B9100419F71 = {
 			isa = PBXGroup;
 			children = (
+				CEA6FD33264829CC0058B77A /* Core */,
 				2DB6719525A9E27300419F71 /* Framework */,
 				2DB6717C25A989B500419F71 /* Wrapper */,
 				2DB6714225A97B9100419F71 /* MSLD */,
@@ -72,6 +85,7 @@
 				2DB6714C25A97B9100419F71 /* Assets.xcassets */,
 				2DB6714E25A97B9100419F71 /* LaunchScreen.storyboard */,
 				2DB6715125A97B9100419F71 /* Info.plist */,
+				CE9285AE264EDA0B0061299E /* ResultViewController.swift */,
 			);
 			path = MSLD;
 			sourceTree = "<group>";
@@ -92,6 +106,20 @@
 				2DB6719925A9E28A00419F71 /* opencv2.framework */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		CEA6FD33264829CC0058B77A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6FD34264829F40058B77A /* DescManager.cpp */,
+				CEA6FD3A264829F40058B77A /* DescManager.h */,
+				CEA6FD35264829F40058B77A /* LineDetector.cpp */,
+				CEA6FD39264829F40058B77A /* LineDetector.h */,
+				CEA6FD38264829F40058B77A /* msld.cpp */,
+				CEA6FD37264829F40058B77A /* msld.h */,
+				CEA6FD36264829F40058B77A /* system.h */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9285AF264EDA0B0061299E /* ResultViewController.swift in Sources */,
 				2DB6714825A97B9100419F71 /* ViewController.swift in Sources */,
 				2DB6714425A97B9100419F71 /* AppDelegate.swift in Sources */,
 				2DB6718B25A98AAF00419F71 /* OpenCVWrapper.mm in Sources */,
 				2DB6714625A97B9100419F71 /* SceneDelegate.swift in Sources */,
+				CEA6FD3D264829F40058B77A /* msld.cpp in Sources */,
+				CEA6FD3B264829F40058B77A /* DescManager.cpp in Sources */,
+				CEA6FD3C264829F40058B77A /* LineDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,13 +20,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     // UI interface
     let gap : CGFloat = UIScreen.main.bounds.size.height * 0.5 - 340
 
-    enum DrawMode {
-        case DEFAULT
-        case GRAY_SCALE
-        case CANNY_EDGE
-        case LINE_DETECT
+    enum DrawMode: String {
+        case DEFAULT = "Default"
+        case GRAY_SCALE = "Gray Scale"
+        case CANNY_EDGE = "Canny Edge"
+        case LINE_DETECT = "Line Detect"
     }
     
+    var touchToSelectDrawMode:Int = 0
     var drawMode: DrawMode = .DEFAULT
     
     override func viewDidLoad() {
@@ -80,11 +81,28 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags.readOnly)
         let image = UIImage(cgImage: quartzImage)
         
-        let imageWithLaneOverlay = OpenCVWrapper.detectLine(image, isRandomColor: false, hasDescriptor: true) // OpenCVWrapper.convert(toCannyEdge: image)
+        var resultImage: UIImage!
+        switch self.touchToSelectDrawMode {
+        case 0:
+            self.drawMode = .DEFAULT
+            resultImage = image
+        case 1:
+            self.drawMode = .GRAY_SCALE
+            resultImage = OpenCVWrapper.convert(toGray: image)
+        case 2:
+            self.drawMode = .CANNY_EDGE
+            resultImage = OpenCVWrapper.convert(toCannyEdge: image)
+        case 3:
+            self.drawMode = .LINE_DETECT
+            resultImage = OpenCVWrapper.detectLine(image, isRandomColor: false, hasDescriptor: true)
+        default:
+            self.drawMode = .DEFAULT
+            resultImage = image
+        }
         
         DispatchQueue.main.async {
-            self.preview.image = imageWithLaneOverlay
-            self.fps.text = String(format:"%.1f fps", 1 / Double(CACurrentMediaTime() - self.startTime))
+            self.preview.image = resultImage
+            self.fps.text = String(format:"Draw mode: \(self.drawMode.rawValue)\nFPS:%.1f", 1 / Double(CACurrentMediaTime() - self.startTime))
             self.startTime = CACurrentMediaTime()
         }
     }
@@ -129,12 +147,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     private func buildFPSLabel() -> UILabel {
-        let fps = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        let fps = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width * 0.5, height: 200))
         fps.backgroundColor = UIColor.clear
+        fps.numberOfLines = 0
         fps.textAlignment = .left
         fps.text = "Default"
         fps.textColor = UIColor.green
-        fps.layer.position = CGPoint(x: self.view.frame.width * 0.8971, y: gap)
+        fps.layer.position = CGPoint(x: self.view.frame.width * 0.5, y: gap)
         return fps
     }
     
@@ -149,16 +168,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         })
         
         // 2. button
-        let searchButton = UIButton(type: .custom, primaryAction: action)
-        searchButton.frame = CGRect(x: 0, y: 0, width: 80, height: 40)
-        searchButton.backgroundColor = UIColor.red
+        let button = UIButton(type: .custom, primaryAction: action)
+        button.frame = CGRect(x: 0, y: 0, width: 80, height: 40)
+        button.backgroundColor = UIColor.red
         // 외곽 테두리로 겹쳐진 뷰 자르기
         // https://m.blog.naver.com/PostView.nhn?blogId=sungho0459&logNo=220966978686&proxyReferer=https:%2F%2Fwww.google.com%2F
-        searchButton.layer.masksToBounds = true
-        searchButton.layer.cornerRadius = 20.0
-        searchButton.layer.position = position
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 20.0
+        button.layer.position = position
         
-        return searchButton
+        return button
     }
     
     private func buildDrawModeLabel() -> UILabel {
@@ -174,8 +193,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     private func buildDrawModeButton(position: CGPoint) -> UIButton {
-        let action = UIAction(title: "Default", handler: { _ in })
+        let action = UIAction(title: "Draw mode", handler: { _ in self.touchToSelectDrawMode = self.updateDrawMode()})
         let button = UIButton(type: .custom, primaryAction: action)
+        button.frame = CGRect(x: 0, y: 0, width: 120, height: 40)
         button.backgroundColor = UIColor.orange
         button.layer.masksToBounds = true
         button.setTitleColor(UIColor.white, for: .normal)
@@ -183,5 +203,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         button.layer.position = position
         
         return button
+    }
+    
+    private func updateDrawMode() -> Int {
+        let sizeOfDrawMode: Int = 4
+        return (self.touchToSelectDrawMode + 1) % sizeOfDrawMode
     }
 }

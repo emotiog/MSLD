@@ -75,4 +75,21 @@
 //    }
 }
 
++(void) appendDesc:(UIImage*) image savePath:(nonnull NSString *)path {
+    cv::Mat origin, gray;
+    
+    UIImageToMat(image, origin);
+    const std::string cppString = [path UTF8String];
+    
+    cv::cvtColor(origin, gray, cv::COLOR_BGR2GRAY);
+    
+    LineDetector lineDetect(gray);
+    MSLD descriptor;
+    std::vector<SEGMENT> segments;
+    lineDetect.line_detection(gray, &segments);
+    
+    descriptor.GetMSLD(gray, &segments);
+    
+    DescManager::instance().append(origin, cppString, segments);
+}
 @end

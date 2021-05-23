@@ -163,8 +163,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let action = UIAction(title: "Search", handler: { _ in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ResultView") as! ResultViewController
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            vc.originImage = self.preview.image;
             self.present(vc, animated: true)
-            
         })
         
         // 2. button

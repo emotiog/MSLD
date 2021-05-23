@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIImage*) detectLine:(UIImage*) inputImage isRandomColor:(bool) isRandom hasDescriptor:(bool) hasDescriptor;
 
 +(void) initDescManager:(NSString*) path;
++(void) appendDesc:(UIImage*) image savePath:(NSString*) path;
 @end
 
 NS_ASSUME_NONNULL_END

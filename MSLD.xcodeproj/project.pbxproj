@@ -15,6 +15,7 @@
 		2DB6715025A97B9100419F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB6714E25A97B9100419F71 /* LaunchScreen.storyboard */; };
 		2DB6718B25A98AAF00419F71 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */; };
 		2DB6719A25A9E28A00419F71 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB6719925A9E28A00419F71 /* opencv2.framework */; };
+		CE42ECB0265A843000BF0955 /* PNGFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42ECAF265A843000BF0955 /* PNGFileManager.swift */; };
 		CE9285AF264EDA0B0061299E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9285AE264EDA0B0061299E /* ResultViewController.swift */; };
 		CEA6FD3B264829F40058B77A /* DescManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA6FD34264829F40058B77A /* DescManager.cpp */; };
 		CEA6FD3C264829F40058B77A /* LineDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA6FD35264829F40058B77A /* LineDetector.cpp */; };
@@ -34,6 +35,7 @@
 		2DB6718925A98AAF00419F71 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		2DB6718A25A98AAF00419F71 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		2DB6719925A9E28A00419F71 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		CE42ECAF265A843000BF0955 /* PNGFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGFileManager.swift; sourceTree = "<group>"; };
 		CE9285AE264EDA0B0061299E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CEA6FD34264829F40058B77A /* DescManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DescManager.cpp; sourceTree = "<group>"; };
 		CEA6FD35264829F40058B77A /* LineDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LineDetector.cpp; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				2DB6714E25A97B9100419F71 /* LaunchScreen.storyboard */,
 				2DB6715125A97B9100419F71 /* Info.plist */,
 				CE9285AE264EDA0B0061299E /* ResultViewController.swift */,
+				CE42ECAF265A843000BF0955 /* PNGFileManager.swift */,
 			);
 			path = MSLD;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				2DB6718B25A98AAF00419F71 /* OpenCVWrapper.mm in Sources */,
 				2DB6714625A97B9100419F71 /* SceneDelegate.swift in Sources */,
 				CEA6FD3D264829F40058B77A /* msld.cpp in Sources */,
+				CE42ECB0265A843000BF0955 /* PNGFileManager.swift in Sources */,
 				CEA6FD3B264829F40058B77A /* DescManager.cpp in Sources */,
 				CEA6FD3C264829F40058B77A /* LineDetector.cpp in Sources */,
 			);
